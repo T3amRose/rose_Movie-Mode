@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>rose_Movie-Mode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="panel" class="panel hidden">
+        <div class="glow"></div>
+
+        <header>
+            <div class="logo">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 7h11a2 2 0 0 1 2 2v1.2l3.4-2.1A1 1 0 0 1 22 9v6a1 1 0 0 1-1.6.9L17 13.8V15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"/>
+                </svg>
+            </div>
+            <div class="titles">
+                <h1>Filmmodus</h1>
+                <span class="sub">rose_Movie-Mode</span>
+            </div>
+            <span id="pill" class="pill">AUS</span>
+        </header>
+
+        <button id="toggle" class="toggle" type="button" data-what="film">
+            <span class="rec"><span class="dot"></span></span>
+            <span class="tlabel">
+                <strong id="tTitle">Filmmodus starten</strong>
+                <small id="tSub">Schaltet Noclip und Unsichtbarkeit frei</small>
+            </span>
+            <span class="switch"><span class="knob"></span></span>
+        </button>
+
+        <p class="note">Beim Starten und Beenden wird das Team per txAdmin benachrichtigt.</p>
+
+        <section id="tools" class="tools">
+            <button id="optNoclip" class="opt" type="button" data-what="noclip">
+                <span class="oicon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3 3 10.5l7.2 2.3L12.5 20z"/></svg>
+                </span>
+                <span class="tlabel">
+                    <strong>Noclip</strong>
+                    <small id="sNoclip">Fliegen, immer unsichtbar</small>
+                </span>
+                <span class="switch sm"><span class="knob"></span></span>
+            </button>
+
+            <button id="optInvis" class="opt" type="button" data-what="invisible">
+                <span class="oicon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12zm10 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M3 3l18 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                </span>
+                <span class="tlabel">
+                    <strong>Unsichtbar</strong>
+                    <small id="sInvis">Ohne Noclip unsichtbar laufen</small>
+                </span>
+                <span class="switch sm"><span class="knob"></span></span>
+            </button>
+        </section>
+
+        <section class="keys">
+            <div class="row"><span class="caps"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span><span>Fliegen</span></div>
+            <div class="row"><span class="caps"><kbd>Q</kbd><kbd>E</kbd></span><span>Hoch / Runter</span></div>
+            <div class="row"><span class="caps"><kbd>Shift</kbd></span><span>Schneller</span></div>
+            <div class="row"><span class="caps"><kbd>Alt</kbd></span><span>Langsamer</span></div>
+        </section>
+
+        <footer><kbd>ESC</kbd> Schliessen</footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
